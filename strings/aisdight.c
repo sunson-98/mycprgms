@@ -1,4 +1,4 @@
-int isdight(int c)
+int aisdight(int c)
 {
 	if (c >= 0 && c <= 9)
 		return 1;

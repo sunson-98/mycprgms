@@ -1,6 +1,6 @@
 #include "stdio.h"
 
-int isalpha (int c)
+int aisalpha (int c)
 {
 	printf("c :%d\n", c);
 	//if (c >= 97 && c <= 122)

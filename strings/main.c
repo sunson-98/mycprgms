@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "defs.h"
 
-int test_islower()
+/*int test_islower()
 {
 	int f = 0;
 	char ch = 'a';
@@ -152,27 +152,66 @@ int test_atoupper()
 
 	retval = atoupper(ch);
 	printf("After converting %c to UPPER :%c\n", ch, retval);
+} 
+	 
+		
+int test_atolower()
+{
+	char retval;
+	char ch = 'A';
+	retval = atolower(ch);
+	printf("after converting %c to lower : %c\n", ch, retval);
+}  
+
+int test_astrcmp()
+{
+int f = 0; 
+char str1[50] = "aura networks", str2[50] = "aura etworks";
+f = astrcmp(str1, str2);
+if (f == 1)
+	printf("\n \n %s: is same as %s: \n \n", str1, str2);
+else 
+	printf("\n these two strings are different\n");
+} */
+
+
+int test_astrncmp()
+{
+	int f = 0, n = 5;
+	char str1[50] = "aura networks", str2[50] = "aura networks";
+	f = astrncmp(str1, str2, n);
+	if (f == 1)
+		printf("\n \n the 1st: %s bytes of: %d is same as in: %s \n \n", str1, n, str2);
+	else 
+		printf("\n \n the 1st : %d bytes are not same in the strings: %s &%s", n, str1, str2);
 }
+
+
+
+
+
 
 int main()
 {
-	/*
-	test_islower();
-	test_isupper();
-	test_isdegit();
-	test_isalnum();
-	test_isalpha();
-	test_isalpha();
-	test_iscntrl();
-	test_isgraph();
-	test_ispunct();
-	test_isspace();
-	test_isasscii();
-	test_isblank();
-	test_isxdigit();
-	test_astrlen();
-	*/
-	test_atoupper();
+	
+	//test_islower();
+	//test_isupper();
+	//test_isdegit();
+	//test_isalnum();
+	//test_isalpha();
+	//test_isalpha();
+	//test_iscntrl();
+	//test_isgraph();
+	//test_ispunct();
+	//test_isspace();
+	//test_isasscii();
+	//test_isblank();
+	//test_isxdigit();
+	//test_astrlen();
+	//test_atoupper();
+	//test_alower();
+   	//test_astrcmp();
+	test_astrncmp();
 }
 
 

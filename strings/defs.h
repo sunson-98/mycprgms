@@ -16,4 +16,5 @@ int aisspace(int c);
 int atolower(int c);
 int astrcmp(char *s1, char *s2);
 int astrncmp(char *s1, char *s2, int c);
+int astrcasecmp(char *s1, char *s2);
 

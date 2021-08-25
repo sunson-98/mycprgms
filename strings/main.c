@@ -189,7 +189,7 @@ int test_astrncmp()
 int test_astrcasecmp()
 {
 	int f = 0;
-	char s1[50] = "aura networks", s2[50] = "AURA NETWORKS";
+	char s1[50] = "aura neTworks", s2[50] = "AURA NETWORKS";
 		f = astrcasecmp(s1, s2);
 		if (f == 1)
 			printf("\n \n%s is same as :%s\n \n", s1, s2);
@@ -197,15 +197,8 @@ int test_astrcasecmp()
 			printf("\n \n:%s is not same as :%s\n \n", s1,s2);
 }
 
-
-
-
-
-
-
 int main()
 {
-	
 	//test_islower();
 	//test_isupper();
 	//test_isdegit();

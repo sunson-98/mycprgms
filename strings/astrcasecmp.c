@@ -1,7 +1,5 @@
 #include"defs.h"
-int atoupper(int c);
-int astrlen(char *s);
-int astrcmp(char *s1, char *s2)
+int astrcasecmp(char *s1, char *s2)
 {
 	int i, y = 0, t;
 	t = astrlen(s1);

@@ -172,19 +172,31 @@ if (f == 1)
 	printf("\n \n %s: is same as %s: \n \n", str1, str2);
 else 
 	printf("\n these two strings are different\n");
-} */
+} 
 
 
 int test_astrncmp()
 {
-	int f = 0, n = 5;
-	char str1[50] = "aura networks", str2[50] = "aura networks";
+	int f = 0, n = 2;
+	char str1[50] = "aurq networks", str2[50] = "aura networks";
 	f = astrncmp(str1, str2, n);
 	if (f == 1)
 		printf("\n \n the 1st: %s bytes of: %d is same as in: %s \n \n", str1, n, str2);
 	else 
 		printf("\n \n the 1st : %d bytes are not same in the strings: %s &%s", n, str1, str2);
+} */
+
+int test_astrcasecmp()
+{
+	int f = 0;
+	char s1[50] = "aura networks", s2[50] = "AURA NETWORKS";
+		f = astrcasecmp(s1, s2);
+		if (f == 1)
+			printf("\n \n%s is same as :%s\n \n", s1, s2);
+		else 
+			printf("\n \n:%s is not same as :%s\n \n", s1,s2);
 }
+
 
 
 
@@ -211,7 +223,8 @@ int main()
 	//test_atoupper();
 	//test_alower();
    	//test_astrcmp();
-	test_astrncmp();
+	//test_astrncmp();
+	test_astrcasecmp();
 }
 
 

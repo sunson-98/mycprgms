@@ -6,49 +6,64 @@ struct student
 	struct student *next;
 };
 
- struct student *h = NULL;
- int add_node(int v)
+struct student *h = NULL;
+int add_node(int v)
 {
-struct student *p = NULL, *t = NULL, *h;
-t = h;
-p = (struct student *) malloc(8);
-p -> no = v;
-p -> next = NULL;
-   if (h == NULL)
-    {
-	  h = p;
-	  return 0;
-    }
-  while(t -> next != NULL)
-     {
-		 t = t -> next;
-	 }
-       t -> next = p;
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	struct student *p = NULL, *t = NULL, *h;
+	t = h;
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	p = (struct student *) malloc(sizeof(struct student));
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	p -> no = v;
+	p -> next = NULL;
+	if (h == NULL)
+	{
+		printf("%d:%s\n", __LINE__, __FUNCTION__);
+		h = p;
+		return 0;
+	}
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	while(t -> next != NULL)
+	{
+		printf("%d:%s\n", __LINE__, __FUNCTION__);
+		t = t -> next;
+	}
+	t -> next = p;
 
-	   return 0;
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	return 0;
 }
 
-	
-  int add_node(int v);
-  int dumplist()
+
+int dumplist()
 {
-	while(h != NULL)
+	struct student *t = NULL;
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	t = h;
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	while(t != NULL)
 	{
-      printf("\n%d\n", h -> no);
-	  printf("\n%p\n", h -> next);
-	  h = h -> next;
+		printf("\n%d : %p\n", t->no, t->next);
+		printf("%d:%s\n", __LINE__, __FUNCTION__);
+		t = t->next;
 	}
-};
+}
 
- int add_node(int v);
- int main()
+int main()
 {
-
- add_node(10);
- add_node(20);
- add_node(30);
- add_node(50);
-
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	add_node(10);
+	return 0;
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	add_node(20);
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	add_node(30);
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	add_node(50);
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
+	dumplist();
+	printf("%d:%s\n", __LINE__, __FUNCTION__);
 }
 
 

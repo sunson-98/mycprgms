@@ -136,7 +136,9 @@ int main()
 	l = posbyval(30);
 	
 
-	printf("\n%d\n: \n%d\n", y, l);
+	printf("\nvalue by given position = %d\n", y);
+	printf("\nposition by given value = %d\n", l);
+
 
 
 	

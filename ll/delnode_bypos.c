@@ -73,12 +73,23 @@ int posbyval(int v)
 {
 	struct student *t = h;
 	int i = 0;
-	while(i != x)
+	 if (x == 0)
+	 {
+		 h = h -> next;
+		 t = h;
+	    return 0;
+	 }
+
+    
+	 while(i != x - 1 )
 	{
 		t = t -> next;
 		i = i + 1;
 	}
-	 t -> next = t -> next -> next;
+	 if (t -> next -> next == NULL)
+		 t -> next = NULL;
+	 else
+        t -> next  = t -> next -> next;
 	 return 0;
 }
 
@@ -112,12 +123,19 @@ int add_node(int v)
 int dumplist()
 {
 	struct student *t = h;
+	int i = 0;
+
+	for (i = 1; i <= 20; i++)
+		printf("%5d", i);
+
+	printf("\n");
 	
 	while(t != NULL)
 	{
-		printf("\nnode value = %d\n", t -> no);
+		printf("%5d", t->no);
 		t = t->next;
 	}
+	printf("\n\n");
 }
 
 int main()
@@ -128,11 +146,12 @@ int main()
 	add_node(20);
 	add_node(30);
 	add_node(50);
-	add_atbegin(100);
-	del_nodebypos(3);
+	dumplist();
+//	add_atbegin(100);
+	del_nodebypos(0);
 	dumplist();
 	get_count();
-	y = valbypos(3);
+	y = valbypos(2);
 	l = posbyval(30);
 	
 

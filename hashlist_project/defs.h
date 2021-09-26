@@ -4,5 +4,4 @@ struct villa
 	char pos[20];
 	struct villa *next;
 };
-struct villa *h[4];
 

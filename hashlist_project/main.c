@@ -101,7 +101,27 @@ void dump_hash_list(void)
 		dump_list(h[i]);
 	}
 }
+int get_posbyval(int v)
+{
+	int i = 0, j;
+	struct villa *t;
+	j = get_hashkey(v);
+	t = h[j];
+	while(t->no != v)
+	{
+		t = t->next;
+		i = i + 1;
+        if(t == NULL)
+			return 0;
+	}
+	i = i +1;
+	printf("\n\npos of %d in %d index list is %s %d\n", v, j, t->pos, i);
+	return 0;
+}
 
+
+
+		
 int main()
 {
 	//printf("%d :%s. %s\n", __LINE__, __FUNCTION__, __FILE__);
@@ -126,5 +146,9 @@ int main()
 	add_node(96);
 	add_node(97);
 	dump_hash_list();
+	get_posbyval(107);
+	get_posbyval(99);
+	get_posbyval(98);
+	get_posbyval(110);
 	return 0;
 }

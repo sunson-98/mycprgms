@@ -6,7 +6,6 @@ extern struct student *h[4];
 
 int add_atbegin(int v)
 {
-extern struct student *h[4];
 	int k = 0;
 	struct student *p;
 	k = get_hash_key(v);

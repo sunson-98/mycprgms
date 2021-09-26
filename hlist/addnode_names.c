@@ -25,7 +25,7 @@ int addnode_name(char *v)
 		t = t->next;
 	}
 	
-	t->next =p;
+	t->next = p;
 	return 0;
 }
 

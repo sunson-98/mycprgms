@@ -81,11 +81,6 @@ int posbyval(int v)
 	 t -> next = t -> next -> next;
 	 return 0;
 }
-
-
-
-
-
 int add_node(int v)
 {
 	struct student *p = NULL, *t = NULL;

@@ -16,7 +16,7 @@ struct student *h;
 	add_node(30);
 	add_node(50);
 	add_atbegin(100);
-	dumplist();
+	update_node_byval(100, 200);
     getmid_val();
 	get_count();
 	y = valbypos(3);
